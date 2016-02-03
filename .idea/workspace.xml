@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60e949e9-fc43-4036-93b1-5159fa30b0f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DvdController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DvdController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/results.php" afterPath="$PROJECT_DIR$/resources/views/results.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="itp405-spring2016-laravel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +39,8 @@
       <file leaf-file-name="DvdController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DvdController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-37.153847">
-              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+            <state vertical-scroll-proportion="-21.23077">
+              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -59,15 +61,15 @@
       <file leaf-file-name="results.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/results.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7121402">
-              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.69086355">
+              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
               <folding>
-                <marker date="1454463580000" expanded="true" signature="1823:2609" placeholder="..." />
-                <marker date="1454463580000" expanded="true" signature="1836:2170" placeholder="..." />
-                <marker date="1454463580000" expanded="true" signature="2228:2567" placeholder="..." />
-                <marker date="1454463580000" expanded="true" signature="2996:3351" placeholder="..." />
-                <marker date="1454463580000" expanded="true" signature="3031:3341" placeholder="..." />
-                <marker date="1454463580000" expanded="true" signature="3062:3330" placeholder="..." />
+                <marker date="1454464157000" expanded="true" signature="1963:2749" placeholder="..." />
+                <marker date="1454464157000" expanded="true" signature="1976:2310" placeholder="..." />
+                <marker date="1454464157000" expanded="true" signature="2368:2707" placeholder="..." />
+                <marker date="1454464157000" expanded="true" signature="3136:3491" placeholder="..." />
+                <marker date="1454464157000" expanded="true" signature="3171:3481" placeholder="..." />
+                <marker date="1454464157000" expanded="true" signature="3202:3470" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -91,8 +93,8 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/public/css/search.css" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DvdController.php" />
         <option value="$PROJECT_DIR$/resources/views/search.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DvdController.php" />
         <option value="$PROJECT_DIR$/resources/views/results.php" />
       </list>
     </option>
@@ -390,16 +392,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DvdController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-37.153847">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.807693">
@@ -408,17 +400,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DvdController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.23077">
+          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/results.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7121402">
-          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.69086355">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
           <folding>
-            <marker date="1454463580000" expanded="true" signature="1823:2609" placeholder="..." />
-            <marker date="1454463580000" expanded="true" signature="1836:2170" placeholder="..." />
-            <marker date="1454463580000" expanded="true" signature="2228:2567" placeholder="..." />
-            <marker date="1454463580000" expanded="true" signature="2996:3351" placeholder="..." />
-            <marker date="1454463580000" expanded="true" signature="3031:3341" placeholder="..." />
-            <marker date="1454463580000" expanded="true" signature="3062:3330" placeholder="..." />
+            <marker date="1454464157000" expanded="true" signature="1963:2749" placeholder="..." />
+            <marker date="1454464157000" expanded="true" signature="1976:2310" placeholder="..." />
+            <marker date="1454464157000" expanded="true" signature="2368:2707" placeholder="..." />
+            <marker date="1454464157000" expanded="true" signature="3136:3491" placeholder="..." />
+            <marker date="1454464157000" expanded="true" signature="3171:3481" placeholder="..." />
+            <marker date="1454464157000" expanded="true" signature="3202:3470" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -17,7 +17,9 @@
 
 <div class="container">
     <h4><a href="/dvds/search"><span class="glyphicon glyphicon-chevron-left"></span>Back to Search</a></h4>
-    <?php if (!$searchTerm && $genre == 'All' && $rating == 'All') { ?>
+    <?php
+    if ($genre && $rating) {
+    if (!$searchTerm && $genre == 'All' && $rating == 'All') { ?>
         <h2>Showing all DVDs:</h2>
     <?php } else if (!$searchTerm) { ?>
         <h2>Showing DVDs with
@@ -34,6 +36,9 @@
             if ($genre != 'All' && $rating != 'All') { echo ' and '; }
             if ($rating != 'All') { echo 'rating "'.$rating.'"'; }
         ?>:</h2>
+    <?php }} ?>
+    <?php if (!$searchTerm && !$genre && !$rating) { ?>
+        <h2>Showing all DVDs:</h2>
     <?php } ?>
     <table class="table table-striped">
         <tr>

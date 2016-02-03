@@ -23,10 +23,6 @@ class DvdController extends Controller
     public function results(Request $request) {
         $searchTerm = $request->input('dvd');
 
-//        if (!$searchTerm) {
-//            return redirect('/dvds/search');
-//        }
-
         $genre = $request->input('genre');
         $rating = $request->input('rating');
 
@@ -39,11 +35,11 @@ class DvdController extends Controller
             ->join('formats', 'dvds.format_id', '=', 'formats.id')
             ->where('title', 'like', "%$searchTerm%");
 
-        if ($rating !== 'All') {
+        if ($rating && $rating !== 'All') {
             $movies = $movies->where('rating_name', '=', $rating);
         }
 
-        if ($genre !== 'All') {
+        if ($genre && $genre !== 'All') {
             $movies = $movies->where('genre_name', '=', $genre);
         }
 
