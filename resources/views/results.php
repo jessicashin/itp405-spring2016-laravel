@@ -27,7 +27,13 @@
             if ($rating != 'All') { echo 'rating "'.$rating.'"'; }
         ?>:</h2>
     <?php } else { ?>
-        <h2>You searched for "<?php echo $searchTerm ?>":</h2>
+        <h2>You searched for "<?php echo $searchTerm ?>"
+        <?php
+            if ($genre != 'All' || $rating != 'All') { echo ' with '; }
+            if ($genre != 'All') { echo 'genre "'.$genre.'"'; }
+            if ($genre != 'All' && $rating != 'All') { echo ' and '; }
+            if ($rating != 'All') { echo 'rating "'.$rating.'"'; }
+        ?>:</h2>
     <?php } ?>
     <table class="table table-striped">
         <tr>
