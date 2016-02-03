@@ -58,14 +58,6 @@
     </table><br><br>
 </div>
 
-<?php //foreach ($mySongs as $song) : ?>
-<!--    <h3>--><?php //echo $song->title ?><!--</h3>-->
-<!--    <span>by</span>-->
-<!--    <span>--><?php //echo $song->artist_name ?><!--</span>-->
-<!--    <p>Play Count: --><?php //echo $song->play_count ?><!--</p>-->
-<!--    <p>Price: $--><?php //echo $song->price ?><!--</p>-->
-<?php //endforeach; ?>
-
 <footer class="footer">
     <div class="footer-container">
         <p class="text-muted">
