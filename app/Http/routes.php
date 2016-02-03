@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/dvds/search', 'DvdController@search');
+Route::get('/dvds', 'DvdController@results');
+
 Route::get('/', function () {
     return view('welcome');
 });
