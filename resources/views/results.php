@@ -18,27 +18,23 @@
 <div class="container">
     <h4><a href="/dvds/search"><span class="glyphicon glyphicon-chevron-left"></span>Back to Search</a></h4>
     <?php
-    if ($genre && $rating) {
-    if (!$searchTerm && $genre == 'All' && $rating == 'All') { ?>
+    if (!$searchTerm && !$genre && !$rating) { ?>
         <h2>Showing all DVDs:</h2>
     <?php } else if (!$searchTerm) { ?>
         <h2>Showing DVDs with
         <?php
-            if ($genre != 'All') { echo 'genre "'.$genre.'"'; }
-            if ($genre != 'All' && $rating != 'All') { echo ' and '; }
-            if ($rating != 'All') { echo 'rating "'.$rating.'"'; }
+            if ($genre) { echo 'genre "'.$genre.'"'; }
+            if ($genre && $rating) { echo ' and '; }
+            if ($rating) { echo 'rating "'.$rating.'"'; }
         ?>:</h2>
     <?php } else { ?>
         <h2>You searched for "<?php echo $searchTerm ?>"
         <?php
-            if ($genre != 'All' || $rating != 'All') { echo ' with '; }
-            if ($genre != 'All') { echo 'genre "'.$genre.'"'; }
-            if ($genre != 'All' && $rating != 'All') { echo ' and '; }
-            if ($rating != 'All') { echo 'rating "'.$rating.'"'; }
+            if ($genre || $rating) { echo ' with '; }
+            if ($genre) { echo 'genre "'.$genre.'"'; }
+            if ($genre && $rating) { echo ' and '; }
+            if ($rating) { echo 'rating "'.$rating.'"'; }
         ?>:</h2>
-    <?php }} ?>
-    <?php if (!$searchTerm && !$genre && !$rating) { ?>
-        <h2>Showing all DVDs:</h2>
     <?php } ?>
     <table class="table table-striped">
         <tr>

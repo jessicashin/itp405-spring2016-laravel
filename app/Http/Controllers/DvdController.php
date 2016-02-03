@@ -35,11 +35,11 @@ class DvdController extends Controller
             ->join('formats', 'dvds.format_id', '=', 'formats.id')
             ->where('title', 'like', "%$searchTerm%");
 
-        if ($rating && $rating !== 'All') {
+        if ($rating) {
             $movies = $movies->where('rating_name', '=', $rating);
         }
 
-        if ($genre && $genre !== 'All') {
+        if ($genre) {
             $movies = $movies->where('genre_name', '=', $genre);
         }
 

@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-md-6">
                 <select class="selectpicker picker" id="genre" name="genre">
-                    <option value="All">All genres</option>
+                    <option value="">All genres</option>
                     <?php foreach ($genres as $genre) : ?>
                         <option value="<?php echo $genre->genre_name ?>"><?php echo $genre->genre_name ?></option>
                     <?php endforeach; ?>
@@ -37,7 +37,7 @@
             </div>
             <div class="col-md-6">
                 <select class="selectpicker picker" id="rating" name="rating">
-                    <option value="All">All ratings</option>
+                    <option value="">All ratings</option>
                     <?php foreach ($ratings as $rating) : ?>
                         <option value="<?php echo $rating->rating_name ?>"><?php echo $rating->rating_name ?></option>
                     <?php endforeach; ?>
