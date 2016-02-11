@@ -38,12 +38,13 @@
     <?php } ?>
     <table class="table table-striped">
         <tr>
-            <th class="col-md-4"><h5>Title</h5></th>
+            <th class="col-md-6"><h5>Title</h5></th>
             <th class="col-md-1"><h5>Rating</h5></th>
             <th class="col-md-1"><h5>Genre</h5></th>
-            <th class="col-md-2"><h5>Label</h5></th>
-            <th class="col-md-2"><h5>Sound</h5></th>
-            <th class="col-md-2"><h5>Format</h5></th>
+            <th class="col-md-1"><h5>Label</h5></th>
+            <th class="col-md-1"><h5>Sound</h5></th>
+            <th class="col-md-1"><h5>Format</h5></th>
+            <th class="col-md-1"><h5>Reviews</h5></th>
         </tr>
         <?php foreach ($dvds as $d) : ?>
             <tr>
@@ -53,6 +54,7 @@
                 <td><?php echo $d->label_name ?></td>
                 <td><?php echo $d->sound_name ?></td>
                 <td><?php echo $d->format_name ?></td>
+                <td><a href="/dvds/<?php echo $d->id ?>">Review</a></td>
             </tr>
         <?php endforeach; ?>
     </table><br><br>
@@ -62,9 +64,9 @@
     <div class="footer-container">
         <p class="text-muted">
             <span class="footer-text">ITP-405</span>
-            <span class="footer-text">February 2 2016</span>
+            <span class="footer-text">February 9 2016</span>
             <span class="footer-text">Jessica Shin</span>
-            <span class="footer-text">Assignment 3: DVD Search with Laravel</span>
+            <span class="footer-text">Assignment 4: DVD Reviews Page with Laravel</span>
         </p>
     </div>
 </footer>

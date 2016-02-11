@@ -54,7 +54,38 @@ body {
     max-width: 170px;
     margin-bottom: 20px;
 }
-
+.rating-picker {
+    max-width: 60px;
+}
 .select-label {
     font-size: 16px;
+}
+
+.reviews-page {
+    max-width: 600px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.info-box {
+    text-align: center;
+    background: #e5e5e5;
+    padding: 45px;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+.review-box {
+    background: #e5e5e5;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.details {
+    margin: 10px;
+    white-space: nowrap;
+}
+#review-content {
+    resize: none;
+    margin-bottom: 25px;
 }

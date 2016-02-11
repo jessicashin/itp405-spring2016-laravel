@@ -27,12 +27,13 @@ class DvdController extends Controller
         $rating = $request->input('rating');
 
         $movies = DB::table('dvds')
-            ->select('title', 'rating_name', 'genre_name', 'label_name', 'sound_name', 'format_name')
+            ->select('title', 'dvds.id', 'rating_name', 'genre_name', 'label_name', 'sound_name', 'format_name')
             ->join('ratings', 'dvds.rating_id', '=', 'ratings.id')
             ->join('genres', 'dvds.genre_id', '=', 'genres.id')
             ->join('labels', 'dvds.label_id', '=', 'labels.id')
             ->join('sounds', 'dvds.sound_id', '=', 'sounds.id')
             ->join('formats', 'dvds.format_id', '=', 'formats.id')
+            ->orderBy('dvds.id')
             ->where('title', 'like', "%$searchTerm%");
 
         if ($rating) {
