@@ -37,10 +37,9 @@ class ReviewController extends Controller
         ]);
 
         if ($validation->fails()) {
-            return $validation->errors()->all();
-//            return redirect()->back()
-//                ->withInput()
-//                ->withErrors($validation);
+            return redirect('/dvds/'.$request->input('dvd_id'))
+                ->withInput()
+                ->withErrors($validation);
         }
 
         $review = new Review([
@@ -51,6 +50,6 @@ class ReviewController extends Controller
         ]);
         $review->save();
 
-        return redirect()->back()->with('success', true);
+        return redirect('/dvds/'.$request->input('dvd_id'))->with('success', true);
     }
 }

@@ -16,6 +16,7 @@
 <body>
 
 <div class="container reviews-page">
+
     <h4><a href="/dvds/search"><span class="glyphicon glyphicon-chevron-left"></span>Back to Search</a></h4>
     <div class="info-box">
         <h2 style="margin-top: 0px;"><?php echo $movie->title ?></h2>
@@ -29,6 +30,19 @@
             <span class="details"><b>Format:</b> <?php echo $movie->format_name ?></span>
         </h5>
     </div><hr>
+
+
+    <?php if (session('success')) : ?>
+        <div class="flash-success">Your review was successfully added.</div><br>
+    <?php endif ?>
+
+    <?php if (count($errors) > 0) : ?>
+        <?php foreach ($errors->all() as $error) : ?>
+            <div class="flash-error"><?php echo $error ?></div>
+        <?php endforeach ?>
+        <br>
+    <?php endif ?>
+
     <form action="/dvds/<?php echo $movie->id ?>" method="post">
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <div class="form-group">
@@ -52,7 +66,7 @@
         </div>
         <div class="form-group">
             <label for="description" class="sr-only">Your review:</label>
-            <textarea id="description" name="description" class="form-control" rows="10" placeholder="Write your review here."><?php echo old('description') ?></textarea>
+            <textarea id="description" name="description" class="form-control text-area" rows="10" placeholder="Write your review here."><?php echo old('description') ?></textarea>
         </div>
         <input type="hidden" name="dvd_id" value="<?php echo $movie->id ?>">
         <button type="submit" class="btn btn-lg btn-primary btn-block">Submit your review for this DVD</button>

@@ -85,7 +85,24 @@ body {
     margin: 10px;
     white-space: nowrap;
 }
-#review-content {
+.text-area {
     resize: none;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.flash-success {
+    background: #80ff80;
+    color: #008000;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.flash-error {
+    background: #ff6666;
+    color: #990000;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
 }
