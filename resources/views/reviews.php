@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>DVD Search</title>
+    <title>DVD Pages</title>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/css/bootstrap-select.min.css">
 
-    <link href="/css/search.css" rel="stylesheet">
+    <link href="/css/dvd.css" rel="stylesheet">
 </head>
 <body>
 
@@ -89,9 +89,9 @@
     <div class="footer-container">
         <p class="text-muted">
             <span class="footer-text">ITP-405</span>
-            <span class="footer-text">February 9 2016</span>
+            <span class="footer-text">February 16 2016</span>
             <span class="footer-text">Jessica Shin</span>
-            <span class="footer-text">Assignment 4: DVD Reviews Page with Laravel</span>
+            <span class="footer-text">Assignment 5: DVD Pages with Eloquent</span>
         </p>
     </div>
 </footer>

@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use App\Models\Dvd;
+use App\Models\Genre;
+use App\Models\Rating;
+use App\Models\Label;
+use App\Models\Sound;
+use App\Models\Format;
 
 class DvdController extends Controller
 {
@@ -53,5 +59,26 @@ class DvdController extends Controller
             'rating' => $rating
         ]);
     }
+
+
+    public function create() {
+
+
+        return view('create', [
+            'genres' => Genre::all(),
+            'ratings' => Rating::all(),
+            'labels' => Label::all(),
+            'sounds' => Sound::all(),
+            'formats' => Format::all()
+        ]);
+    }
+
+//    public function store(Request $request) {
+//
+//        return view('create', [
+//            'genres' => $genres,
+//            'ratings' => $ratings
+//        ]);
+//    }
 
 }

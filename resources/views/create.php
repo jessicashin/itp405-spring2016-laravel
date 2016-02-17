@@ -16,12 +16,13 @@
 <body>
 
 <div class="container">
-    <form action="/dvds" method="get" class="form-search">
-        <h2 class="form-signin-heading">Search for a DVD</h2>
+    <form action="/dvds/create" method="get" class="form-search">
+        <h2 class="form-signin-heading">Add a new DVD</h2>
         <div class="form-group">
             <label for="dvd" class="sr-only">DVD title</label>
-            <input type="text" class="form-control" id="dvd" name="dvd" placeholder="DVD title">
+            <input type="text" class="form-control" id="dvd" name="dvd" placeholder="Enter the DVD title">
         </div>
+
         <div class="row">
             <div class="col-md-6"><label for="genre" class="select-label">Select a genre:</label></div>
             <div class="col-md-6"><label for="rating" class="select-label">Select a rating:</label></div>
@@ -29,7 +30,6 @@
         <div class="row">
             <div class="col-md-6">
                 <select class="selectpicker picker" id="genre" name="genre">
-                    <option value="">All genres</option>
                     <?php foreach ($genres as $genre) : ?>
                         <option value="<?php echo $genre->genre_name ?>"><?php echo $genre->genre_name ?></option>
                     <?php endforeach; ?>
@@ -37,7 +37,6 @@
             </div>
             <div class="col-md-6">
                 <select class="selectpicker picker" id="rating" name="rating">
-                    <option value="">All ratings</option>
                     <?php foreach ($ratings as $rating) : ?>
                         <option value="<?php echo $rating->rating_name ?>"><?php echo $rating->rating_name ?></option>
                     <?php endforeach; ?>
@@ -45,7 +44,58 @@
             </div>
         </div>
 
-        <button type="submit" class="btn btn-lg btn-primary btn-block">Search</button>
+        <div class="row">
+            <div class="col-md-6"><label for="label" class="select-label">Select a label:</label></div>
+            <div class="col-md-6"><label for="sound" class="select-label">Select a sound:</label></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <select class="selectpicker picker" id="label" name="label">
+                    <?php foreach ($labels as $label) : ?>
+                        <option value="<?php echo $label->label_name ?>"><?php echo $label->label_name ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <select class="selectpicker picker" id="sound" name="sound">
+                    <?php foreach ($sounds as $sound) : ?>
+                        <option value="<?php echo $sound->sound_name ?>"><?php echo $sound->sound_name ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-6"><label for="format" class="select-label">Select a format:</label></div>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <select class="selectpicker picker" id="format" name="format">-->
+<!--                    --><?php //foreach ($formats as $format) : ?>
+<!--                        <option value="--><?php //echo $format->format_name ?><!--">--><?php //echo $format->format_name ?><!--</option>-->
+<!--                    --><?php //endforeach; ?>
+<!--                </select>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <button type="submit" class="btn btn-lg btn-primary btn-block">Create</button>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="format" class="select-label">Select a format:</label>
+                <select class="selectpicker picker" id="format" name="format">
+                    <?php foreach ($formats as $format) : ?>
+                        <option value="<?php echo $format->format_name ?>"><?php echo $format->format_name ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="col-md-6 create-button">
+                <button type="submit" class="btn btn-lg btn-primary btn-block">Create</button>
+            </div>
+        </div>
+
+
     </form>
 
 </div> <!-- /container -->
