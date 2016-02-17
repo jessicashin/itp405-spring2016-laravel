@@ -13,7 +13,7 @@ class GenreController extends Controller
 {
     public function show($id) {
         $genre = Genre::find($id);
-        $dvds = Dvd::with('rating', 'genre', 'label')->get();
+        $dvds = Dvd::with('rating', 'genre', 'label')->where('genre_id','=',$id)->get();
 
         return view('genre', [
             'genre' => $genre,

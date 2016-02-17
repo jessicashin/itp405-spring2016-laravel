@@ -27,9 +27,9 @@
         <?php foreach ($dvds as $d) { ?>
             <tr>
                 <td><?php echo $d->title ?></td>
-                <td><?php echo $d->rating ?></td>
-                <td><?php echo $d->genre ?></td>
-                <td><?php echo $d->label ?></td>
+                <td><?php echo $d->rating->rating_name ?></td>
+                <td><?php echo $d->genre->genre_name ?></td>
+                <td><?php echo $d->label->label_name ?></td>
             </tr>
         <?php } ?>
     </table><br><br>
