@@ -24,14 +24,14 @@
             <th class="col-md-2"><h5>Genre</h5></th>
             <th class="col-md-2"><h5>Label</h5></th>
         </tr>
-        <?php foreach ($dvds as $d) : ?>
+        <?php foreach ($dvds as $d) { ?>
             <tr>
                 <td><?php echo $d->title ?></td>
-                <td><?php echo $d->rating->rating_name ?></td>
-                <td><?php echo $d->genre->genre_name ?></td>
-                <td><?php echo $d->label->label_name ?></td>
+                <td><?php echo $d->rating ?></td>
+                <td><?php echo $d->genre ?></td>
+                <td><?php echo $d->label ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php } ?>
     </table><br><br>
 </div> <!-- /container -->
 
