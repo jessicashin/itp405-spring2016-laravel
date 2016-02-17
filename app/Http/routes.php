@@ -33,4 +33,5 @@ Route::group(['middleware' => ['web']], function () {
     Route::post('/dvds/create', 'DvdController@store');
     Route::get('/dvds/{id}', 'ReviewController@create');
     Route::post('/dvds/{id}', 'ReviewController@store');
+    Route::get('/genres/{id}/dvds', 'GenreController@show');
 });

@@ -17,7 +17,7 @@
 
 <div class="container">
 
-    <div class="create-flags">
+    <div class="create-page-flags">
         <?php if (session('success')) : ?>
             <div class="flash-success">Your DVD was successfully added.</div><br>
         <?php endif ?>

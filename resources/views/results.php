@@ -9,7 +9,6 @@
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/css/bootstrap-select.min.css">
 
     <link href="/css/dvd.css" rel="stylesheet">
 </head>
@@ -36,28 +35,34 @@
             if ($rating) { echo 'rating "'.$rating.'"'; }
         ?>:</h2>
     <?php } ?>
-    <table class="table table-striped">
-        <tr>
-            <th class="col-md-6"><h5>Title</h5></th>
-            <th class="col-md-1"><h5>Rating</h5></th>
-            <th class="col-md-1"><h5>Genre</h5></th>
-            <th class="col-md-1"><h5>Label</h5></th>
-            <th class="col-md-1"><h5>Sound</h5></th>
-            <th class="col-md-1"><h5>Format</h5></th>
-            <th class="col-md-1"><h5>Reviews</h5></th>
-        </tr>
-        <?php foreach ($dvds as $d) : ?>
+
+    <?php if ($dvds) { ?>
+        <table class="table table-striped">
             <tr>
-                <td><?php echo $d->title ?></td>
-                <td><?php echo $d->rating_name ?></td>
-                <td><?php echo $d->genre_name ?></td>
-                <td><?php echo $d->label_name ?></td>
-                <td><?php echo $d->sound_name ?></td>
-                <td><?php echo $d->format_name ?></td>
-                <td><a href="/dvds/<?php echo $d->id ?>">Review</a></td>
+                <th class="col-md-6"><h5>Title</h5></th>
+                <th class="col-md-1"><h5>Rating</h5></th>
+                <th class="col-md-1"><h5>Genre</h5></th>
+                <th class="col-md-1"><h5>Label</h5></th>
+                <th class="col-md-1"><h5>Sound</h5></th>
+                <th class="col-md-1"><h5>Format</h5></th>
+                <th class="col-md-1"><h5>Reviews</h5></th>
             </tr>
-        <?php endforeach; ?>
-    </table><br><br>
+            <?php foreach ($dvds as $d) : ?>
+                <tr>
+                    <td><?php echo $d->title ?></td>
+                    <td><?php echo $d->rating_name ?></td>
+                    <td><?php echo $d->genre_name ?></td>
+                    <td><?php echo $d->label_name ?></td>
+                    <td><?php echo $d->sound_name ?></td>
+                    <td><?php echo $d->format_name ?></td>
+                    <td><a href="/dvds/<?php echo $d->id ?>">Review</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </table><br><br>
+    <?php } else { ?>
+        <br>
+        <h4>Sorry, nothing was found matching your criteria!</h4>
+    <?php } ?>
 </div>
 
 <footer class="footer">
@@ -75,7 +80,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/js/bootstrap-select.min.js"></script>
 
 </body>
 </html>
