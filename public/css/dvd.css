@@ -3,7 +3,7 @@ html {
     min-height: 100%;
 }
 body {
-    padding-top: 40px;
+    padding-top: 80px;
     padding-bottom: 40px;
     background-color: #eee;
     margin-bottom: 60px; // footer height
@@ -26,7 +26,7 @@ body {
     margin: 20px 0;
 }
 .footer-text {
-    margin-left: 2em;
+    margin-left: 3em;
 }
 
 .form-search {
@@ -71,7 +71,7 @@ body {
     background: #e5e5e5;
     padding: 45px;
     border-radius: 25px;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 .review-box {
@@ -115,6 +115,12 @@ body {
     margin: 0 auto;
 }
 
+.genre-list {
+    font-size: small;
+}
 .sidebar-right {
     border-left: groove;
+}
+.navbar {
+    margin-bottom: 20px;
 }
