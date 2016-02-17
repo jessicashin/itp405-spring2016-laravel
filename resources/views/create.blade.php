@@ -14,12 +14,12 @@
 
     <div class="create-page-flags">
         <?php if (session('success')) : ?>
-            <div class="flash-success">Your DVD was successfully added.</div><br>
+            <div class="flash-success" style="margin-bottom: -20px">Your DVD was successfully added.</div><br>
         <?php endif ?>
 
         <?php if (count($errors) > 0) : ?>
             <?php foreach ($errors->all() as $error) : ?>
-                <div class="flash-error"><?php echo $error ?></div>
+                <div class="flash-error" style="margin-bottom: -20px"><?php echo $error ?></div>
             <?php endforeach ?>
         <?php endif ?>
     </div>

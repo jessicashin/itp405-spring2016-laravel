@@ -47,7 +47,7 @@
         <div class="col-md-2 sidebar-right">
             <h4>Genre Pages</h4>
             <?php foreach ($genres as $genre) : ?>
-                <p class="genre-list"><a href="<?php echo '/genres/'.$genre->id.'/dvds' ?>"><?php echo $genre->genre_name ?></p>
+                <p class="genre-list"><a href="<?php echo '/genres/'.$genre->id.'/dvds' ?>"><?php echo $genre->genre_name ?></a></p>
             <?php endforeach; ?>
         </div>
     </div>
