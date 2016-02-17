@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use Validator;
+
 use App\Models\Dvd;
 use App\Models\Genre;
 use App\Models\Rating;
@@ -73,12 +75,32 @@ class DvdController extends Controller
         ]);
     }
 
-//    public function store(Request $request) {
-//
-//        return view('create', [
-//            'genres' => $genres,
-//            'ratings' => $ratings
-//        ]);
-//    }
+    public function store(Request $request) {
+        $validation = Validator::make($request->all(), [
+            'dvd' => 'required',
+            'genre' => 'required',
+            'rating' => 'required',
+            'label' => 'required',
+            'sound' => 'required',
+            'format' => 'required',
+        ]);
+        if ($validation->fails()) {
+            return redirect('dvds/create')
+                ->withInput()
+                ->withErrors($validation);
+        }
+
+        $dvd = new Dvd([
+            'title' => $request->input('dvd'),
+            'genre_id' => $request->input('genre'),
+            'rating_id' => $request->input('rating'),
+            'label_id' => $request->input('label'),
+            'sound_id' => $request->input('sound'),
+            'format_id' => $request->input('format')
+        ]);
+        $dvd->save();
+
+        return redirect('dvds/create')->with('success', true);
+    }
 
 }

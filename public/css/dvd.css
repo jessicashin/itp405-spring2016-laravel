@@ -110,3 +110,7 @@ body {
 .create-button {
     margin-top: 15px;
 }
+.create-flags {
+    max-width: 400px;
+    margin: 0 auto;
+}
