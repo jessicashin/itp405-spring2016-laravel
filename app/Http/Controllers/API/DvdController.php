@@ -80,6 +80,9 @@ class DvdController extends Controller
         if ($validation->passes()) {
             $dvd = new Dvd();
             $dvd->title = $request->input('title');
+            $dvd->award = $request->input('award');
+            $dvd->genre_id = $request->input('genre_id');
+            $dvd->rating_id = $request->input('rating_id');
             $dvd->save();
 
             return [
