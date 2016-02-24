@@ -29,16 +29,25 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-
-                @yield('navbar')
-                {{--<li class="active"><a href="#">Search</a></li>--}}
-                {{--<li><a href="/dvds/create">Create</a></li>--}}
-                {{--<li><a href="/dvds">All DVDs</a></li>--}}
-
+                <li class="{{ Request::is('dvds/search') ? 'active' : '' }}"><a href="{{ Request::is('dvds/search') ? '#' : '/dvds/search' }}">Search</a></li>
+                <li class="{{ Request::is('dvds/create') ? 'active' : '' }}"><a href="{{ Request::is('dvds/create') ? '#' : '/dvds/create' }}">Create</a></li>
+                <li class="{{ Request::is('dvds') ? 'active' : '' }}"><a href="{{ Request::is('dvds') ? '#' : '/dvds' }}">DVDs</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DVD API <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/api/v1/genres">All genres</a></li>
+                        <li><a href="/api/v1/genres/1">Single genre (first)</a></li>
+                        <li><a href="/api/v1/dvds">First 20 DVDs</a></li>
+                        <li><a href="/api/v1/dvds/1">Single DVD (first)</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo">Create a DVD (POST)</a></li>
+                    </ul>
+                </li>
+                <li class="{{ Request::is('temp-api') ? 'active' : '' }}"><a href="{{ Request::is('temp-api') ? '#' : '/temp-api' }}">API</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://itpweb.herokuapp.com/courses/20161405">ITP-405</a></li>
-                <li><a href="http://itpweb.herokuapp.com/assignments/dvd-api">Assignment 6</a></li>
+                <li><a href="http://itpweb.herokuapp.com/assignments/api">Assignment 7</a></li>
                 <li><a href="https://github.com/jessicashin/itp405-spring2016-laravel">Github Repo</a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -52,7 +61,7 @@
         <p class="text-muted">
             <span class="footer-text">23 February 2016</span>
             <span class="footer-text">Jessica Shin</span>
-            <span class="footer-text">Assignment 6: Build an API</span>
+            <span class="footer-text">Assignment 7: Working with APIs</span>
         </p>
     </div>
 </footer>

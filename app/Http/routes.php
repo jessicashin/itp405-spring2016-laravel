@@ -43,3 +43,7 @@ Route::group([ 'prefix' => 'api/v1', 'namespace' => 'API' ], function() {
     Route::get('dvds/{id}', 'DvdController@show');
     Route::post('dvds', 'DvdController@store');
 });
+
+Route::get('/temp-api', function () {
+    return view('temp-api');
+});

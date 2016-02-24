@@ -1,13 +1,6 @@
 @extends('layouts.master')
 @section('page-title', 'Create')
 
-@section('navbar')
-    <li><a href="/dvds/search">Search</a></li>
-    <li class="active"><a href="">Create</a></li>
-    <li><a href="/dvds">DVDs</a></li>
-@endsection
-
-
 @section('content')
 
 <div class="container">
