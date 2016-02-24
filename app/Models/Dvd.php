@@ -21,7 +21,9 @@ class Dvd extends Model
         'sound_id',
         'format_id',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'genre',
+        'rating'
     ];
 
     public function rating() {
