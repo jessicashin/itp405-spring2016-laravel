@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/css/bootstrap-select.min.css">
 
     <link href="/css/dvd.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('/images/favicon.ico') }}">
 </head>
 <body>
 
@@ -49,7 +50,7 @@
 <footer class="footer">
     <div class="footer-container container text-center">
         <p class="text-muted">
-            <span class="footer-text">17 February 2016</span>
+            <span class="footer-text">23 February 2016</span>
             <span class="footer-text">Jessica Shin</span>
             <span class="footer-text">Assignment 6: Build an API</span>
         </p>

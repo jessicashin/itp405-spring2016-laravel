@@ -15,6 +15,15 @@ class Dvd extends Model
         'format_id'
     ];
 
+    protected $hidden = [
+        'release_date',
+        'label_id',
+        'sound_id',
+        'format_id',
+        'created_at',
+        'updated_at'
+    ];
+
     public function rating() {
         return $this->belongsTo('App\Models\Rating');
     }
