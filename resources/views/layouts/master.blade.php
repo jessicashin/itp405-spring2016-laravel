@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/dvds/search" style="margin-right: 5px;">Laravel DVD Pages</a>
+            <a class="navbar-brand" href="/" style="margin-right: 5px;">Laravel DVD Pages</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
