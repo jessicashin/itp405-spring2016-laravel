@@ -14,10 +14,10 @@
         </tr>
         <?php foreach ($dvds as $d) { ?>
             <tr>
-                <td><?php echo $d->title ?></td>
-                <td><?php echo $d->rating->rating_name ?></td>
-                <td><?php echo $d->genre->genre_name ?></td>
-                <td><?php echo $d->label->label_name ?></td>
+                <td><?php if ($d->title) { echo $d->title; } ?></td>
+                <td><?php if ($d->rating) { echo $d->rating->rating_name; } ?></td>
+                <td><?php if ($d->genre) { echo $d->genre->genre_name; } ?></td>
+                <td><?php if ($d->label) { echo $d->label->label_name; } ?></td>
             </tr>
         <?php } ?>
     </table><br><br>
