@@ -70,16 +70,16 @@ body {
     text-align: center;
     background: #e5e5e5;
     padding: 45px;
-    border-radius: 25px;
     margin-top: 10px;
     margin-bottom: 30px;
+    border-radius: 5px;
 }
 .review-box {
     background: #e5e5e5;
     padding: 20px;
-    border-radius: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 .details {
     margin: 10px;

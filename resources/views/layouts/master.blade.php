@@ -31,7 +31,7 @@
             <ul class="nav navbar-nav">
                 <li class="{{ Request::is('dvds/search') ? 'active' : '' }}"><a href="{{ Request::is('dvds/search') ? '#' : '/dvds/search' }}">Search</a></li>
                 <li class="{{ Request::is('dvds/create') ? 'active' : '' }}"><a href="{{ Request::is('dvds/create') ? '#' : '/dvds/create' }}">Create</a></li>
-                <li class="{{ Request::is('dvds') ? 'active' : '' }}"><a href="{{ Request::is('dvds') ? '#' : '/dvds' }}">DVDs</a></li>
+                <li class="{{ Request::is('dvds') ? 'active' : '' }}"><a href="{{ Request::is('dvds') ? '#' : '/dvds' }}">List</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DVD API <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -59,7 +59,7 @@
 <footer class="footer">
     <div class="footer-container container text-center">
         <p class="text-muted">
-            <span class="footer-text">23 February 2016</span>
+            <span class="footer-text">29 February 2016</span>
             <span class="footer-text">Jessica Shin</span>
             <span class="footer-text">Assignment 7: Working with APIs</span>
         </p>
