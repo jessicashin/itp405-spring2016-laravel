@@ -95,7 +95,7 @@
                         <div class="portfolio-box">
                             <span class="portfolio-box-title">/flickr/{username}</span><br>
                             <span class="portfolio-box-content">Working with an API</span>
-                            <p style="font-size:18px;color:#a5a5a5;">Note: {username} must be a valid Flickr user.</p>
+                            <p style="font-size:18px;color:#a5a5a5;">Note: {username} must be a valid Flickr username.</p>
                         </div>
                     </div>
                 </div>

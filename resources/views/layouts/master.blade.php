@@ -43,7 +43,7 @@
                         <li><a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo">Create a DVD (POST)</a></li>
                     </ul>
                 </li>
-                <li class="{{ Request::is('flickr/Paul Brouns') ? 'active' : '' }}"><a href="{{ Request::is('flickr') ? '#' : '/flickr/Paul Brouns' }}">Flickr API</a></li>
+                <li class="{{ Request::is('flickr/petrapetruta') ? 'active' : '' }}"><a href="{{ Request::is('flickr') ? '#' : '/flickr/petrapetruta' }}">Flickr API</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://itpweb.herokuapp.com/courses/20161405">ITP-405</a></li>
@@ -59,7 +59,7 @@
 <footer class="footer">
     <div class="footer-container container text-center">
         <p class="text-muted">
-            <span class="footer-text">1 March 2016</span>
+            <span class="footer-text">7 March 2016</span>
             <span class="footer-text">Jessica Shin</span>
             <span class="footer-text">Assignment 7: Working with APIs</span>
         </p>

@@ -18,14 +18,16 @@ class Flickr {
             'user_id' => $userID,
             'per_page' => 5
         ]);
-//        if (Cache::get($url)) {
-//            $photosString = Cache::get($url);
-//            $photos = simplexml_load_string($photosString);
-//        } else {
-            $photos = simplexml_load_file($url)->{"photos"}->{"photo"};
-            $photosString = $photos->asXML();
-            Cache::put($url, $photosString, 60);
-//        }
+        if (Cache::get($url)) {
+            $photosString = Cache::get($url);
+            $xml = simplexml_load_string($photosString);
+            $photos = $xml->{"photo"};
+        } else {
+            $xml = simplexml_load_file($url)->{"photos"};
+            $photos = $xml->{"photo"};
+            $photosString = $xml->asXML();
+            Cache::put($url, $photosString, 5);
+        }
 
         return $photos;
     }
