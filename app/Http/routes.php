@@ -54,6 +54,7 @@ Route::get('/flickr/{username}', function ($username) {
     $photos = $flickr->userPhotos($userID);
 
     return view('flickr', [
-        'photos' => $photos
+        'photos' => $photos,
+        'username' => $username
     ]);
 });

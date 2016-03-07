@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Services\API;
-use Illuminate\Cache;
+use Cache;
 
 class Flickr {
     protected $api_key;
@@ -12,29 +12,21 @@ class Flickr {
         $this->api_key = $config['api_key'];
     }
 
-    public function photos($url)
-    {
-        if (Cache::get($url)) {
-            $jsonString = Cache::get($url);
-        } else {
-            $profile = $this->profile($url);
-            $endpoint = $this->buildRequestURL('users/' . $profile->id . '/tracks.json');
-            $jsonString = file_get_contents($endpoint);
-            Cache::put($url, $jsonString, 60);
-        }
-
-        return json_decode($jsonString);
-    }
-
     public function userPhotos($userID)
     {
         $url = $this->buildRequestURL('flickr.people.getPublicPhotos', [
             'user_id' => $userID,
-            'per_page' => 5,
-
+            'per_page' => 5
         ]);
-        $jsonString = file_get_contents($url);
-        $photos = json_decode($jsonString);
+//        if (Cache::get($url)) {
+//            $photosString = Cache::get($url);
+//            $photos = simplexml_load_string($photosString);
+//        } else {
+            $photos = simplexml_load_file($url)->{"photos"}->{"photo"};
+            $photosString = $photos->asXML();
+            Cache::put($url, $photosString, 60);
+//        }
+
         return $photos;
     }
 
@@ -43,14 +35,16 @@ class Flickr {
         $url = $this->buildRequestURL('flickr.people.findByUsername', [
             'username' => $username
         ]);
-        $jsonString = file_get_contents($url);
-        $userID = json_decode($jsonString);
-        return $userID;
+        $xml = simplexml_load_file($url);
+        $user = $xml->{"user"};
+        $id = (string)$user["nsid"];
+
+        return $id;
     }
 
     protected function buildRequestURL($method, $qs = [])
     {
         $qs['api_key'] = $this->api_key;
-        return self::ENDPOINT . '?method=' . $method . http_build_query($qs);
+        return self::ENDPOINT . '?method=' . $method . '&' . http_build_query($qs);
     }
 }

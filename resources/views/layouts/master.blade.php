@@ -43,7 +43,7 @@
                         <li><a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo">Create a DVD (POST)</a></li>
                     </ul>
                 </li>
-                {{--<li class="{{ Request::is('flickr') ? 'active' : '' }}"><a href="{{ Request::is('flickr') ? '#' : '/flickr' }}">Flickr API</a></li>--}}
+                <li class="{{ Request::is('flickr/Paul Brouns') ? 'active' : '' }}"><a href="{{ Request::is('flickr') ? '#' : '/flickr/Paul Brouns' }}">Flickr API</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://itpweb.herokuapp.com/courses/20161405">ITP-405</a></li>
