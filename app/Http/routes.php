@@ -1,4 +1,5 @@
 <?php
+use App\Services\API\Flickr;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,15 @@ Route::group([ 'prefix' => 'api/v1', 'namespace' => 'API' ], function() {
     Route::post('dvds', 'DvdController@store');
 });
 
-Route::get('/temp-api', function () {
-    return view('temp-api');
+Route::get('/flickr/{username}', function ($username) {
+    $flickr = new Flickr([
+        'api_key' => 'ba81959ac2eb3de25244fbd03cf2bbbe'
+    ]);
+
+    $userID = $flickr->userID($username);
+    $photos = $flickr->userPhotos($userID);
+
+    return view('flickr', [
+        'photos' => $photos
+    ]);
 });

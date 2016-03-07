@@ -91,12 +91,13 @@
                     </div>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="/temp-api">
+                    <div class="non-link">
                         <div class="portfolio-box">
-                            <span class="portfolio-box-title">/temp-api</span><br>
+                            <span class="portfolio-box-title">/flickr/{username}</span><br>
                             <span class="portfolio-box-content">Working with an API</span>
+                            <p style="font-size:18px;color:#a5a5a5;">Note: {username} must be a valid Flickr user.</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
